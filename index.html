@@ -25,6 +25,8 @@
           colors: {
             primary: "rgb(180, 244, 97)",
             navPrime: 'rgb(249, 247, 243)',
+            balanceBg: 'rgba(17, 17, 17, 0.05)'
+
           },
         },
       },
@@ -34,7 +36,7 @@
 
 <body>
   <header class="sticky top-0 z-10 backdrop-blur-md">
-    <div class="bg-navPrime backdrop-blur-md pb-5 mb-10">
+    <div class="bg-navPrime pb-5 mb-10">
       <div class="navbar  w-11/12 mx-auto py-6">
         <div class="navbar-start">
           <div class="py-2 px-8 bg-primary text-black font-semibold text-base rounded-lg">
@@ -49,7 +51,7 @@
           <span><img src="./assets/coin.png"></span>
           <div class="flex text-xl font-medium text-gray-500 ">
             <div class="flex gap-1">
-              <p>5500</p>
+              <p id="net-balance">5500</p>
               <p>BDT</p>
             </div>
           </div>
@@ -66,27 +68,54 @@
       </div>
     </div>
   </header>
-  <main class="w-11/12 mx-auto mt-20">
-    <div class="card lg:card-side shadow-xl">
-      <figure class="w-1/2">
-        <img src="./assets/noakhali.png" alt="Album" />
-      </figure>
-      <div class="card-body gap-4  rounded-lg w-1/2">
-        <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
-        <p class="flex-grow-0"> The recent floods in Noakhali have caused significant damage to homes infrastructure.
-          Your donation will
-          help provide essential supplies and to those affected by this disaster. Every contribution, big or small,
-          makes difference. Please join us in supporting the relief efforts and making a positive impact on the lives of
-          those in need..</p>
-        <div class=" w-full flex flex-col gap-4 mt-2 ">
-          <input type="number" placeholder="Enter your donate amount" class=" w-full input input-bordered " />
-          <button class="btn hover:bg-lime-300 bg-primary text-xl font-semibold  w-full">Donate Now</button>
+  <main class="w-11/12 mx-auto  mt-20">
+    
+    <div id="donation-card border border-gray-300 ">
+      <!-- Card Container -->
+      <div id="card-container" class="bg-white  rounded-lg shadow-md overflow-hidden flex items-center flex-col md:flex-row">
+        <!-- Image Section -->
+        <div id="image-section" class="md:w-1/2 w-full p-4">
+          <img src="./assets/noakhali.png" alt="Flood Relief" class="h-full w-full object-cover">
+        </div>
+    
+        <!-- Text Section -->
+        <div id="text-section" class=" md:w-1/2 w-full p-4">
+          <!-- Donation Status -->
+          <div id="donation-status" class="flex items-center mb-2">
+            <img src="./assets/coin.png" alt="coin icon" class=" mr-2" />
+            <span class=" flex gap-1 text-sm text-gray-600 font-semibold"> 
+              <p id="total-donation-noakhali">500</p>
+              <h3>BDT</h3>
+            </span>
+
+          </div>
+    
+          <!-- Title -->
+          <h2 id="donation-title" class="text-xl font-bold text-gray-800 mb-3">
+            Donate for Flood at Noakhali, Bangladesh
+          </h2>
+    
+          <!-- Paragraph -->
+          <p id="donation-description" class="text-sm text-gray-600 mb-4">
+            The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference.
+          </p>
+    
+          <!-- Donation Input and Button -->
+          <div id="donation-input-container">
+            <input id="donation-amount" type="text" placeholder="Write Donation Amount" class="border border-gray-300 rounded-lg p-3 w-full mb-3" />
+            <button id="donate-button" class="bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 w-full transition duration-200">
+              Donate Now
+            </button>
+          </div>
         </div>
       </div>
     </div>
+    
+    
+
   </main>
   <!-- Js files -->
-  <script src="./js/index.js"></script>
+  <script src="./js/interact.js"></script>
 </body>
 
 </html>
