@@ -1,5 +1,6 @@
 // const donateAmount = document.getElementById('donation-amount').value;
 // console.log(donateAmount);
+const modal = document.getElementById('my-modal')
 function getValueById(id) {
   return parseFloat(document.getElementById(id).value);
 }
@@ -15,6 +16,8 @@ document.getElementById("donate-button").addEventListener("click", function () {
   document.getElementById("total-donation-noakhali").innerText = displayTotalDonation;
   document.getElementById("net-balance").innerText = remainingBalance;
 
+
+  
 
  
 });

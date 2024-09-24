@@ -69,49 +69,73 @@
     </div>
   </header>
   <main class="w-11/12 mx-auto  mt-20">
-    
+
     <div id="donation-card border border-gray-300 ">
       <!-- Card Container -->
-      <div id="card-container" class="bg-white  rounded-lg shadow-md overflow-hidden flex items-center flex-col md:flex-row">
+      <div id="card-container"
+        class="bg-white  rounded-lg shadow-md overflow-hidden flex items-center flex-col md:flex-row">
         <!-- Image Section -->
         <div id="image-section" class="md:w-1/2 w-full p-4">
           <img src="./assets/noakhali.png" alt="Flood Relief" class="h-full w-full object-cover">
         </div>
-    
+
         <!-- Text Section -->
         <div id="text-section" class=" md:w-1/2 w-full p-4">
           <!-- Donation Status -->
           <div id="donation-status" class="flex items-center mb-2">
             <img src="./assets/coin.png" alt="coin icon" class=" mr-2" />
-            <span class=" flex gap-1 text-sm text-gray-600 font-semibold"> 
+            <span class=" flex gap-1 text-sm text-gray-600 font-semibold">
               <p id="total-donation-noakhali">500</p>
               <h3>BDT</h3>
             </span>
 
           </div>
-    
+
           <!-- Title -->
           <h2 id="donation-title" class="text-xl font-bold text-gray-800 mb-3">
             Donate for Flood at Noakhali, Bangladesh
           </h2>
-    
+
           <!-- Paragraph -->
           <p id="donation-description" class="text-sm text-gray-600 mb-4">
-            The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference.
+            The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will
+            help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes
+            a difference.
           </p>
-    
+
           <!-- Donation Input and Button -->
           <div id="donation-input-container">
-            <input id="donation-amount" type="text" placeholder="Write Donation Amount" class="border border-gray-300 rounded-lg p-3 w-full mb-3" />
-            <button id="donate-button" class="bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 w-full transition duration-200">
+            <input id="donation-amount" type="text" placeholder="Write Donation Amount"
+              class="border border-gray-300 rounded-lg p-3 w-full mb-3" />
+            <button id="donate-button"onclick="my_modal_1.showModal()"
+              class="bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 w-full transition duration-200">
               Donate Now
             </button>
+            <!-- Modal -->
+            <dialog id="my_modal_1" class="modal">
+              <div class="modal-box flex flex-col items-center">
+                <img src="./assets/coin.png" alt="">
+                <h3 class="text-5xl text-slate-950 font-black ">Congratulation</h3>
+                
+                <p class="py-4 text-xl text-slate-500 font-medium">You have donated for human kind </p>
+                <p class="text-4xl text-slate-900 font-extrabold">Successfully</p>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn ">Close Confirmation</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
           </div>
         </div>
       </div>
     </div>
-    
-    
+    <div id="history" class="w-11/12 mx-auto">
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" ">open modal</button> -->
+     
+
 
   </main>
   <!-- Js files -->
