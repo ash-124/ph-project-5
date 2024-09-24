@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-Site</title>
+    <!-- Daisy And Tailwind  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!-- 
+
+
+ -->
+
+<body>
+    <main>
+    <div class="space-y-2 w-11/12 mx-auto mt-10">
+        <h1 class="text-3xl text-black">Commonly asked questions:></h1>
+        <div class="collapse bg-base-200">
+            <input type="radio" name="my-accordion-1" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+                <p>DOM is like a interface to webpage and javascript. <br> DOM is just a structure ,It represent the
+                    webpage as tree of object.That can manipulate with js.</p>
+            </div>
+        </div>
+        <div class="collapse bg-base-200">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+                <p>There are too many ways to select an element using js.Like => getElementsByTagName(),
+                    getElementById(), getElementsByClassName(),querySelectorAll(), querySelector(). But personally i
+                    usally use getElementById() most of the time.And also chose the selector when the need to use. </p>
+            </div>
+        </div>
+        <div class="collapse bg-base-200">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why
+                is it useful?</div>
+            <div class="collapse-content">
+                <p>
+                    Event delegation is a technique in the DOM where you attach a single event listener to a parent
+                    element instead of adding listeners to each child element. This works by leveraging **event
+                    bubbling**, where events triggered on a child element propagate up to its parent.
+                    <br>
+                    Key benefits:
+                    <ul>
+                        <li>Improves performance by reducing the number of event listeners.</li>
+                        <li>Handles dynamic elements** efficiently without needing to reattach listeners.</li>
+                        <li>Simplifies code maintenance** by centralizing event handling.
+                        </li>
+                        
+                    </ul>
+                   
+                </p>
+            </div>
+        </div>
+        <div class="collapse bg-base-200">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?
+            </div>
+            <div class="collapse-content">
+                <p>Usally to manipulate the attributes.I use <ul>
+                    <li>getAttribute();</li>
+                <li>setAttribute();</li>
+                <li>.style property</li>
+                <li>classlist.add/remove/toggle;</li></ul> </p>
+            </div>
+        </div>
+    </div>
+    </main>
+</body>
+
+</html>
