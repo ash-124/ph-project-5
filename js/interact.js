@@ -111,6 +111,11 @@ assistantTab.addEventListener("click", function () {
 
 // switching to another html page>
 document.getElementById("blog-btn").addEventListener("click",function(){
-  window.location.href = "../blog.html";
+  window.location.href = "./blog.html";
 })
+document.getElementById("back-home").addEventListener("click",function(){
+  window.location.href = "./index.html";
+
+})
+
 
