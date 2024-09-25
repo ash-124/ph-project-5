@@ -35,7 +35,7 @@
 </head>
 
 <body>
-  <header class="sticky top-0 z-10 backdrop-blur-md">
+  <header class="sticky top-0 z-10 backdrop-blur-md ">
     <div class="bg-navPrime pb-5 mb-10">
       <div class="navbar  w-11/12 mx-auto py-6">
         <div class="navbar-start">
@@ -51,7 +51,7 @@
           <span><img src="./assets/coin.png"></span>
           <div class="flex text-xl font-medium text-gray-500 ">
             <div class="flex gap-1">
-              <p id="net-balance">5500</p>
+              <p id="net-balance">55000</p>
               <p>BDT</p>
 
             </div>
@@ -59,9 +59,6 @@
         </div>
       </div>
     </div>
-
-  </header>
-  <main class="w-11/12 mx-auto  mt-20">
     <!-- Sticky buttons -->
     <div class="flex  items-center justify-center">
       <div class="flex items-center justify-center gap-2">
@@ -71,7 +68,11 @@
           class=" hover:bg-gray-300 py-2 px-6  text-{' rgba(17, 17, 17, 0.7),'} font-medium text-xl rounded-lg border border-gray-300">History</button>
       </div>
     </div>
-    <div id="donation-section" class="border  border-gray-300 ">
+
+  </header>
+  <main class="w-11/12 mx-auto  mt-20">
+
+    <div id="donation-section" class="border  border-gray-300 rounded-lg space-y-3 ">
       <!-- card-01 -->
       <div id="card-container"
         class="bg-white  rounded-lg shadow-md overflow-hidden flex items-center flex-col md:flex-row">
@@ -110,7 +111,7 @@
               class="border border-gray-300 rounded-lg p-3 w-full mb-3" />
             <p id="inputError" class="text-red-500 hidden">The value is invalid</p>
             <p id="input-balance-error" class="hidden text-red-500">Insufficient Balance!</p>
-            <button id="donate-button" onclick="my_modal_1.showModal()";
+            <button id="donate-button"
               class="bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 w-full transition duration-200">
               Donate Now
             </button>
@@ -147,7 +148,7 @@
           <div id="donation-status" class="flex items-center mb-2">
             <img src="./assets/coin.png" alt="coin icon" class=" mr-2" />
             <span class=" flex gap-1 text-sm text-gray-600 font-semibold">
-              <p id="total-donation-lokkhipur">500</p>
+              <p id="total-donation-lokkhipur">00</p>
               <h3>BDT</h3>
             </span>
 
@@ -160,7 +161,8 @@
 
           <!-- Paragraph -->
           <p id="donation-description" class="text-sm text-gray-600 mb-4">
-            The recent floods in Lokkhipur have caused significant damage to homes and infrastructure. Your donation will
+            The recent floods in Lokkhipur have caused significant damage to homes and infrastructure. Your donation
+            will
             help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes
             a difference.
           </p>
@@ -171,12 +173,12 @@
               class="border border-gray-300 rounded-lg p-3 w-full mb-3" />
             <p id="inputError-2" class="text-red-500 hidden">The value is invalid</p>
             <p id="input-balance-error-2" class="hidden text-red-500">Insufficient Balance!</p>
-            <button id="donate-button-2" onclick=" "
+            <button id="donate-button-2"
               class="bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 w-full transition duration-200">
               Donate Now
             </button>
             <!-- Modal -->
-            <dialog id="my_modal_1" class="modal">
+            <dialog id="my_modal_2" class="modal">
               <div class="modal-box flex flex-col items-center">
                 <img src="./assets/coin.png" alt="">
                 <h3 class="text-5xl text-slate-950 font-black ">Congratulation</h3>
@@ -185,7 +187,6 @@
                 <p class="text-4xl text-slate-900 font-extrabold">Successfully</p>
                 <div class="modal-action">
                   <form method="dialog">
-                    <!-- if there is a button in form, it will close the modal -->
                     <button class="btn ">Close Confirmation</button>
                   </form>
                 </div>
@@ -208,7 +209,7 @@
           <div id="donation-status" class="flex items-center mb-2">
             <img src="./assets/coin.png" alt="coin icon" class=" mr-2" />
             <span class=" flex gap-1 text-sm text-gray-600 font-semibold">
-              <p id="total-donation-cumilla">500</p>
+              <p id="total-donation-cumilla">50</p>
               <h3>BDT</h3>
             </span>
 
@@ -232,12 +233,12 @@
               class="border border-gray-300 rounded-lg p-3 w-full mb-3" />
             <p id="inputError-3" class="text-red-500 hidden">The value is invalid</p>
             <p id="input-balance-error-3" class="hidden text-red-500">Insufficient Balance!</p>
-            <button id="donate-button-3" onclick=" "
+            <button id="donate-button-3"
               class="bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 w-full transition duration-200">
               Donate Now
             </button>
             <!-- Modal -->
-            <dialog id="my_modal_1" class="modal">
+            <dialog id="my_modal_3" class="modal">
               <div class="modal-box flex flex-col items-center">
                 <img src="./assets/coin.png" alt="">
                 <h3 class="text-5xl text-slate-950 font-black ">Congratulation</h3>
@@ -246,7 +247,6 @@
                 <p class="text-4xl text-slate-900 font-extrabold">Successfully</p>
                 <div class="modal-action">
                   <form method="dialog">
-                    <!-- if there is a button in form, it will close the modal -->
                     <button class="btn ">Close Confirmation</button>
                   </form>
                 </div>
