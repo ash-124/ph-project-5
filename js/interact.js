@@ -46,14 +46,16 @@ function calculateDonationShow(id, donationAmount, givenTotalDonation, accountNe
     document.getElementById(accountNetBalance).innerText = remainingBalance;
     const history = addHistory(displayTotalDonation, donatePlace);
     history();
-    if (netBalance > donateAmount || donateAmount >= 0) {
-      my_modal_1.showModal();
-    }
+   
+    
+    
   });
 };
 // function ends 
 // Event listeners
 calculateDonationShow("donate-button", "donation-amount", "total-donation-noakhali", "net-balance", "donation-title", "input-balance-error", "inputError" );
+calculateDonationShow("donate-button-2", "donation-amount-2", "total-donation-lokkhipur", "net-balance", "donation-title-2", "input-balance-error-2", "inputError-2" );
+calculateDonationShow("donate-button-3", "donation-amount-3", "total-donation-cumilla", "net-balance", "donation-title-3", "input-balance-error-3", "inputError-3" );
 function addHistory(displayTotalDonation, donatePlace) {
   const historyItems = document.createElement("div");
   historyItems.classList.add("border", "border-white-500", "mb-4");
@@ -111,11 +113,7 @@ assistantTab.addEventListener("click", function () {
 
 // switching to another html page>
 document.getElementById("blog-btn").addEventListener("click",function(){
-  window.location.href = "./blog.html";
-})
-document.getElementById("back-home").addEventListener("click",function(){
-  window.location.href = "./index.html";
-
+  window.location.href = "../blog.html";
 })
 
 
