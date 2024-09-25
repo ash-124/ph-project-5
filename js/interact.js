@@ -1,4 +1,4 @@
-
+//function starts 
 function getValueById(id) {
   return parseFloat(document.getElementById(id).value);
 }
@@ -9,30 +9,54 @@ function getInnerText(id) {
   return document.getElementById(id).innerText;
 }
 function liveAlertD(id, error) {
-  const inputValue = parseFloat(document.getElementById(id).value);
+  const inputValue = document.getElementById(id).value;
 
-  if (isNaN(inputValue) || inputValue <= 0  ) {
+  if (isNaN(inputValue) || parseFloat(inputValue) <= 0  ) {
     document.getElementById(error).classList.remove("hidden");
+    inputValue.value = " ";
     return;
   }
 }
-
-document.getElementById("donate-button").addEventListener("click", function () {
-  const donateAmount = getValueById("donation-amount");
-  const totalDonation = getValueByIdTextField("total-donation-noakhali");
-  const netBalance = getValueByIdTextField("net-balance");
-  const donatePlace = getInnerText("donation-title");
-  const displayTotalDonation = donateAmount + totalDonation;
-  const remainingBalance = netBalance - donateAmount;
-  document.getElementById("total-donation-noakhali").innerText =
-    displayTotalDonation;
-  document.getElementById("net-balance").innerText = remainingBalance;
-  const history = addHistory(displayTotalDonation, donatePlace);
-  history();
-});
+function calculateDonationShow(id, donationAmount, givenTotalDonation, accountNetBalance, donationTitle, inputErrorId, inputValidation ){
+  document.getElementById(id).addEventListener("click", function () {
+    const donateAmount = getValueById(donationAmount);
+    const totalDonation = getValueByIdTextField(givenTotalDonation);
+    const netBalance = getValueByIdTextField(accountNetBalance);
+    const donatePlace = getInnerText(donationTitle);
+    if ( donateAmount <= 0 || isNaN( donateAmount)) {
+      document.getElementById( inputValidation).classList.remove("hidden");
+      
+      return;
+    }
+    else {
+      document.getElementById( inputValidation).classList.add("hidden");
+    };
+    if (netBalance < donateAmount ) {
+      document.getElementById(inputErrorId).classList.remove('hidden');
+      return;
+    }
+    else{
+      document.getElementById(inputErrorId).classList.add('hidden');
+     
+    };
+    const displayTotalDonation = donateAmount + totalDonation;
+    const remainingBalance = netBalance - donateAmount;
+    document.getElementById(givenTotalDonation).innerText =
+      displayTotalDonation;
+    document.getElementById(accountNetBalance).innerText = remainingBalance;
+    const history = addHistory(displayTotalDonation, donatePlace);
+    history();
+    if (netBalance > donateAmount || donateAmount >= 0) {
+      my_modal_1.showModal();
+    }
+  });
+};
+// function ends 
+// Event listeners
+calculateDonationShow("donate-button", "donation-amount", "total-donation-noakhali", "net-balance", "donation-title", "input-balance-error", "inputError" );
 function addHistory(displayTotalDonation, donatePlace) {
   const historyItems = document.createElement("div");
-  historyItems.classList.add("border", "border-white-500");
+  historyItems.classList.add("border", "border-white-500", "mb-4");
   historyItems.innerHTML = `
    <p class="text-lg text-slate-500 font-medium">
    ${new Date().toLocaleDateString()}
@@ -48,6 +72,7 @@ document.getElementById("donation-amount").addEventListener("input", function(){
   liveAlertD("donation-amount", "inputError")
  
 })
+// Toggle of tabs
 const assistantTab = document.getElementById("donation-btn");
 const historyTab = document.getElementById("donation-history");
 historyTab.addEventListener("click", function () {
@@ -83,4 +108,9 @@ assistantTab.addEventListener("click", function () {
   document.getElementById("donation-section").classList.remove("hidden");
   document.getElementById("history-container").classList.add("hidden");
 });
+
+// switching to another html page>
+document.getElementById("blog-btn").addEventListener("click",function(){
+  window.location.href = "../blog.html";
+})
 

@@ -40,7 +40,7 @@
       <div class="navbar  w-11/12 mx-auto py-6">
         <div class="navbar-start">
           <div class="py-2 px-8 bg-primary text-black font-semibold text-base rounded-lg">
-            <button class="hover:bg-lime-300">Blog</button>
+            <button id="blog-btn" class="hover:bg-lime-300">Blog</button>
           </div>
         </div>
         <div class="navbar-center flex items-center gap-2">
@@ -53,27 +53,25 @@
             <div class="flex gap-1">
               <p id="net-balance">5500</p>
               <p>BDT</p>
+
             </div>
           </div>
         </div>
       </div>
     </div>
-   
+
   </header>
   <main class="w-11/12 mx-auto  mt-20">
-     <!-- Sticky buttons -->
+    <!-- Sticky buttons -->
     <div class="flex  items-center justify-center">
       <div class="flex items-center justify-center gap-2">
-        <button
-          id="donation-btn"
+        <button id="donation-btn"
           class=" hover:bg-lime-300 py-2 px-6 bg-primary text-black font-semibold text-xl rounded-lg border-none">Donation</button>
-        <button
-          id="donation-history"
+        <button id="donation-history"
           class=" hover:bg-gray-300 py-2 px-6  text-{' rgba(17, 17, 17, 0.7),'} font-medium text-xl rounded-lg border border-gray-300">History</button>
       </div>
     </div>
-    <div id="donation-section" class="border border-gray-300 ">
-      <!-- Card Container -->
+    <div id="donation-section" class="border  border-gray-300 ">
       <div id="card-container"
         class="bg-white  rounded-lg shadow-md overflow-hidden flex items-center flex-col md:flex-row">
         <!-- Image Section -->
@@ -109,8 +107,9 @@
           <div id="donation-input-container">
             <input id="donation-amount" type="text" placeholder="Write Donation Amount"
               class="border border-gray-300 rounded-lg p-3 w-full mb-3" />
-              <p id="inputError" class="text-red-500 hidden">The value is invalid</p>
-            <button id="donate-button"onclick="my_modal_1.showModal()"
+            <p id="inputError" class="text-red-500 hidden">The value is invalid</p>
+            <p id="input-balance-error" class="hidden text-red-500">Insufficient Balance!</p>
+            <button id="donate-button"
               class="bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 w-full transition duration-200">
               Donate Now
             </button>
@@ -119,7 +118,7 @@
               <div class="modal-box flex flex-col items-center">
                 <img src="./assets/coin.png" alt="">
                 <h3 class="text-5xl text-slate-950 font-black ">Congratulation</h3>
-                
+
                 <p class="py-4 text-xl text-slate-500 font-medium">You have donated for human kind </p>
                 <p class="text-4xl text-slate-900 font-extrabold">Successfully</p>
                 <div class="modal-action">
@@ -133,15 +132,20 @@
           </div>
         </div>
       </div>
+
+
     </div>
-    <div id="history-container" class=" hidden border border-slate-300 rounded-lg p-6 bg-gradient-to-r from-teal-500 to-teal-200">
+    <div id="history-container"
+      class=" hidden border border-slate-300 rounded-lg p-6 bg-gradient-to-r from-teal-500 to-teal-200">
       <div class="flex items-center">
         <span class=" inline-block w-6 h-6 rounded-full bg-gradient-to-br from-pink-500 hover:to-orange-500"></span>
-        <h2 class="text-3xl text-gray-500 font-extrabold bg-gradient-to-br from-pink-500 hover:to-orange-500 bg-clip-text text-transparent">Donation History</h2>
+        <h2
+          class="text-3xl text-gray-500 font-extrabold bg-gradient-to-br from-pink-500 hover:to-orange-500 bg-clip-text text-transparent">
+          Donation History</h2>
       </div>
     </div>
-     <!--inner html  -->
-     
+    <!--inner html  -->
+
 
   </main>
   <!-- Js files -->
